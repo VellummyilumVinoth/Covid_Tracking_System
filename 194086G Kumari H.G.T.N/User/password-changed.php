@@ -1,0 +1,51 @@
+<?php require_once "controllerUserData.php"; ?>
+<?php
+if($_SESSION['info'] == false){
+    header('Location: login-user.php');  
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700">
+    <!-- https://fonts.google.com/specimen/Roboto -->
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- https://getbootstrap.com/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">
+</head>
+<body>
+<div class='container tm-mt-big tm-mb-big'>
+      <div class='row'>
+        <div class='col-12 mx-auto tm-login-col'>
+          <div class='tm-bg-primary-dark tm-block tm-block-h-auto'>
+            <div class='row'>
+              <div class='col-12 text-center'>
+            <?php 
+            if(isset($_SESSION['info'])){
+                ?>
+                <div class="alert alert-success text-center">
+                <?php echo $_SESSION['info']; ?>
+                </div>
+                <?php
+            }
+            ?>
+                <form action="login-user.php" method="POST">
+                    <div class="form-group">
+                        <input class="form-control button" type="submit" name="login-now" value="Login Now">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+        </div>
+    </div>
+    
+</body>
+</html>
