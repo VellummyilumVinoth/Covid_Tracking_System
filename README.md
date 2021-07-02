@@ -1,2 +1,2 @@
-# Webapp
+# COVID Tracking System
 This is used for tracking people affected by disease such as Corona, dengue etc...
